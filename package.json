@@ -1,0 +1,41 @@
+{
+  "name": "node-red-contrib-seed",
+  "version": "0.0.1",
+  "description": "Seed project for creating Node Red Contrib projects...",
+  "main": "index.js",
+  "scripts": {
+    "test": "node node_modules/mocha/bin/mocha --config .mocharc.json \"test/**/*_spec.js\" --exit",
+    "test:watch": "npm run test -- --watch",
+    "lint": "node node_modules/eslint-watch/bin/esw -c .eslintrc.json nodes test",
+    "lint:watch": "node node_modules/eslint-watch/bin/esw -c .eslintrc.json nodes test -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paulroth3d/node-red-contrib-seed.git"
+  },
+  "node-red": {
+    "nodes": {
+      "your-component": "nodes/your-component.js"
+    }
+  },
+  "keywords": [
+    "add-keyword_node-red_when-ready"
+  ],
+  "author": "Paul Roth <proth@salesforce.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/paulroth3d/node-red-contrib-seed/issues"
+  },
+  "homepage": "https://github.com/paulroth3d/node-red-contrib-seed#readme",
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-plugin-html": "^5.0.3",
+    "eslint-watch": "^5.1.2",
+    "mocha": "6.1.4",
+    "node-red": "0.20.5",
+    "node-red-node-test-helper": "0.2.2"
+  },
+  "dependencies": {
+    "fancy-log": "^1.3.3"
+  }
+}
