@@ -45,6 +45,38 @@ While developing your component, its important that we can also test it within N
 
 **Step 3** run Node-Red as normal.
 
-# Further Reading
 
-Please see the [Creating Nodes](https://nodered.org/docs/creating-nodes/) section of the Node-Red documentation for how to create nodes.
+
+----
+
+# Learn More
+
+## Starting Out
+
+Check Out [Node Red: Creating Nodes](https://nodered.org/docs/creating-nodes/)
+
+Also note the standard utilities available:
+
+* Node Red built-in Editor UI Widgets (like TypedInput - a replacement for a regular &lt;input&gt; that allows the type of the value to be chosen, including options for string, number and boolean. Used extensively in the core Node-RED nodes.[https://nodered.org/docs/api/ui/](https://nodered.org/docs/api/ui/)
+* Node Red Utility Methods - like the [getMessageProperty](https://nodered.org/docs/api/modules/v/0.20.0/@node-red_util_util.html#.getMessageProperty) and [setMessageProperty](https://nodered.org/docs/api/modules/v/0.20.0/@node-red_util_util.html#.setMessageProperty) commands used here.
+
+## Creating Components
+
+* If you would like to make a large textarea (like the template in this component), review the [handlebars.html](nodes/handlebars/handlebars.html)
+  * [Although I couldn't find much documentation](https://discourse.nodered.org/t/solved-is-there-a-way-to-resize-to-full-page-the-node-edit-form/9283), create two properties, one that will be hidden (and the value) and the other to be the editor.
+  * Note the `oneditprepare`, `oneditsave`, `oneditcancel` and `oneditresize` methods in the registerType - within the html page.
+
+## Testing
+* To test the project run `npm run test` or `npm run test:watch` to continuously test.
+* When creating nodes, [Node Red uses mocha for its testing](https://nodered.org/docs/creating-nodes/first-node) - found in the [node-red-node-test-helper](https://www.npmjs.com/package/node-red-node-test-helper)
+* Tests are made:
+  * creating a flow: ex `const flow = [{id:'n1', type:'handlebars', name:'handlebars'}];`
+  * loading your class into the flow, ex: `helper.load(handlebarsNode, flow, () => {...}`
+  * finding the nodes generated within the flow, ex: `let n1 = helper.getNode('n1');`
+  * adding event emitter listeners on the follow up nodes (to listen for teh response), ex: `n2.on("input", (msg) => {...}`
+  * firing the 'receive' to push the payload onto your node, for it to flow through. ex: `n1.receive({payload:{...}});`
+* [Note that Mocha does not force --exit by default](https://boneskull.com/mocha-v4-nears-release/#mochawontforceexit)
+
+## Further Reading
+
+* Using an Ace Editor for a node Property: [https://discourse.nodered.org/t/solved-is-there-a-way-to-resize-to-full-page-the-node-edit-form/9283](https://discourse.nodered.org/t/solved-is-there-a-way-to-resize-to-full-page-the-node-edit-form/9283)
