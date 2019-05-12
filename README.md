@@ -35,7 +35,8 @@ This is a very simple seed project for starting a new Node-Contrib module projec
 
 While developing your component, its important that we can also test it within Node Red without having to constantly copy the files back and forth.
 
-`npm link` greatly helps in this case - as we can use our local files directly.
+`npm link` greatly helps in this case - as we can use our local files directly
+OR simply make a symbolic link to your Custom Nodes project within your Node Red running project...
 
 **Step 1** run `npm link` within your node-contrib project.
 
@@ -45,7 +46,13 @@ While developing your component, its important that we can also test it within N
 
 **Step 3** run Node-Red as normal.
 
+## Intellisense
 
+We have taken great care to use the JSDoc Typescript support, so you can still get the introspection, and suggestions while working with your code - even though Node Red does not support typescript.
+
+Please see the [nodes/Types.js](nodes/Types.js) file for definitions, and [nodes/example/your-component.js](nodes/example/your-component.js) for examples of it working...
+
+![Screenshot of intellisense](docs/images/intellisense.png)
 
 ----
 

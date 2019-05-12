@@ -1,3 +1,6 @@
+# File Descriptors
+.DS_Store
+
 # Logs
 logs
 *.log
