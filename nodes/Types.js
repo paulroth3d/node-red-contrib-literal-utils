@@ -4,7 +4,7 @@
 
 /**
  * Node Red Server
- * @typedef {import('node-red').Red} Red
+ * @typedef {import('node-red').Red} NodeRed
  */
 
 /**

@@ -12,7 +12,7 @@ const EventEmitter = require('events').EventEmitter;
  * Creates a mock Node Red server
  * @param {string} connectionConfigId - the id of the node that the connection should be found under
  * @param {import('node-red').Node} configMock - the mock configuration node
- * @returns {Red} - a node red mock
+ * @returns {NodeRed} - a node red mock
  */
 function createNodeRedMock(configId, configMock){
 
@@ -29,7 +29,7 @@ function createNodeRedMock(configId, configMock){
 
 /**
  * Generates a Mock for a Node Red Node
- * @returns {NODE_RED_NODE} - Mock for a Node Red Node
+ * @returns {import('node-red').Node} - Mock for a Node Red Node
  */
 function createNodeRedNodeMock(){
   const results = new EventEmitter();

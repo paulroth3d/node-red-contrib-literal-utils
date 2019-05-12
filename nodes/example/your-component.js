@@ -22,7 +22,7 @@ class SomeClass {
   
   /**
    * Initialize the node red node
-   * @param {Red} RED - Node Red framework
+   * @param {NodeRed} RED - Node Red framework
    * @param {NodeRedConfig} config - configuration for module from the node red editor
    * @param {NodeRedNode} nodeRedNode - the node red instance
    */
@@ -76,7 +76,7 @@ class SomeClass {
 
 /**
  * Initialize node-red node module
- * @param {Red} RED - Node Red framework instance
+ * @param {NodeRed} RED - Node Red framework instance
  */
 function setupNodeRed(RED){
   //-- register the component type (in this case: your-component)
@@ -101,66 +101,71 @@ module.exports = setupNodeRed;
 
 
 //-- example snippet
-//   
-//   const log = require('fancy-log'); // eslint-disable-line no-unused-vars
-//   
-//   /**
-//    * $3
-//    */
-//   class $2 {
-//   
-//     /** Constructor */
-//     constructor() {
-//       // super();
-//   
-//       //-- initialize component properties
-//     }
-//     
-//     /**
-//      * Initialize the node red node
-//      * @param {object} RED - Node Red framework
-//      * @param {object} config - configuration for module from the node red editor
-//      * @param {object} nodeRedNode - the node red instance
-//      */
-//     initialize(RED, config, nodeRedNode) {
-//       // super.initialize(RED, config, nodeRedNode);
-//   
-//       //-- capture Node Red info
-//       this.RED = RED;
-//       this.config = config;
-//       this.nodeRedNode = nodeRedNode;
-//   
-//       //-- capture information from the nodeRedNode
-//       this.name = nodeRedNode.name;
-//   
-//       //-- handle events on the nodeRedNode
-//       nodeRedNode.on('input', (msg) => {
-//         // msg.payload = node.query;
-//   
-//         nodeRedNode.send(msg);
-//       });
-//   
-//       return this;
-//     }
+// 
+// const log = require('fancy-log'); // eslint-disable-line no-unused-vars
+// 
+// /**
+//  * $3
+//  * @class
+//  * @extends {NodeRedNodeClass}
+//  */
+// class $2 {
+// 
+//   /** Constructor */
+//   constructor() {
+//     // super();
+// 
+//     //-- initialize component properties
 //   }
 //   
 //   /**
-//    * Initialize node-red node module
-//    * @param {NodeRed} RED - Node Red framework instance
+//    * Initialize the node red node
+//    * @param {NodeRed} RED - Node Red framework
+//    * @param {NodeRedConfig} config - configuration for module from the node red editor
+//    * @param {NodeRedNode} nodeRedNode - the node red instance
 //    */
-//   function setupNodeRed(RED){
-//     RED.nodes.registerType('$1', function(config){
-//       RED.nodes.createNode(this, config);
-//   
-//       //-- capture information from the config
-//       this.name = config.name;
-//   
-//       this.info = new $2()
-//         .initialize(RED, config, this);
+//   initialize(RED, config, nodeRedNode) {
+//     // super.initialize(RED, config, nodeRedNode);
+// 
+//     //-- capture Node Red info
+//     /** Node Red Server instance */
+//     this.RED = RED;
+//     /** Configuration passed to the node - immutable */
+//     this.config = config;
+//     /** Node Red Node this class will update */
+//     this.nodeRedNode = nodeRedNode;
+// 
+//     //-- capture information from the nodeRedNode
+//     this.name = nodeRedNode.name;
+// 
+//     //-- handle events on the nodeRedNode
+//     nodeRedNode.on('input', (msg) => {
+//       // msg.payload = node.query;
+// 
+//       nodeRedNode.send(msg);
 //     });
+// 
+//     return this;
 //   }
-//   
-//   //-- because it seems we cannot export the class outright...
-//   setupNodeRed.infoClass = $2;
-//   
-//   module.exports = setupNodeRed;
+// }
+// 
+// /**
+//  * Initialize node-red node module
+//  * @param {NodeRed} RED - Node Red framework instance
+//  */
+// function setupNodeRed(RED){
+//   RED.nodes.registerType('$1', function(config){
+//     RED.nodes.createNode(this, config);
+// 
+//     //-- capture information from the config
+//     this.name = config.name;
+// 
+//     this.info = new $2()
+//       .initialize(RED, config, this);
+//   });
+// }
+// 
+// //-- because it seems we cannot export the class outright...
+// setupNodeRed.infoClass = $2;
+// 
+// module.exports = setupNodeRed;
