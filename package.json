@@ -19,7 +19,7 @@
     }
   },
   "keywords": [
-    "add-keyword_node-red_when-ready"
+    "node-red", "literals", "array", "utility"
   ],
   "author": "Paul Roth <proth@salesforce.com>",
   "license": "MIT",
