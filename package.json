@@ -1,7 +1,7 @@
 {
-  "name": "node-red-contrib-seed",
+  "name": "node-red-contrib-literal-utils",
   "version": "1.0.0",
-  "description": "Seed project for creating Node Red Contrib projects...",
+  "description": "Node Red Utility Nodes to work with literals and arrays.",
   "main": "index.js",
   "scripts": {
     "test": "node node_modules/mocha/bin/mocha --config .mocharc.json \"test/**/*_spec.js\" --exit",
@@ -11,11 +11,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/paulroth3d/node-red-contrib-seed.git"
+    "url": "git+https://github.com/paulroth3d/node-red-contrib-literal-utils.git"
   },
   "node-red": {
     "nodes": {
-      "your-component": "nodes/example/your-component.js"
+      "pick-array-value": "nodes/array/pick-array-value.js"
     }
   },
   "keywords": [
@@ -24,9 +24,9 @@
   "author": "Paul Roth <proth@salesforce.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/paulroth3d/node-red-contrib-seed/issues"
+    "url": "https://github.com/paulroth3d/node-red-contrib-literal-utils/issues"
   },
-  "homepage": "https://github.com/paulroth3d/node-red-contrib-seed#readme",
+  "homepage": "https://github.com/paulroth3d/node-red-contrib-literal-utils#readme",
   "devDependencies": {
     "@types/events": "^3.0.0",
     "@types/node-red": "^0.20.0",
