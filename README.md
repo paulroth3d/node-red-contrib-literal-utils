@@ -46,6 +46,17 @@ OR simply make a symbolic link to your Custom Nodes project within your Node Red
 
 **Step 3** run Node-Red as normal.
 
+# Deploying
+
+When your component is ready do the following:
+
+* verify that lint succeeds by running : `npm run lint` or `npm run lint:watch`
+* verify that all tests succeed by running: `npm run test` or `npm run test:watch`
+* update `index.js` to provide a facade to the inner es6 classes, so you can more easily extend them in other libraries.
+* upde the `test/facade_spec.js` to ensure your classes can be found.
+* add in 'node-red' as a keyword to the `package.json` - so it can be found at: [https://flows.nodered.org/](https://flows.nodered.org/)
+* publish to npm
+
 ## Intellisense
 
 We have taken great care to use the JSDoc Typescript support, so you can still get the introspection, and suggestions while working with your code - even though Node Red does not support typescript.
