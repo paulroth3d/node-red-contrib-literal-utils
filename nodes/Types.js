@@ -8,6 +8,11 @@
  */
 
 /**
+ * Node Red Node
+ * @typedef {import('node-red').Node} NodeRedNode
+ */
+
+/**
  * Configuration for a Node Red Node
  * @typedef NodeRedConfig
  * @property {string} name - the name of the node
