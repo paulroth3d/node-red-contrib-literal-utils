@@ -4,7 +4,7 @@
 
 
 module.exports = {
-  example : {
-    YourComponent: require('./nodes/example/your-component').infoClass,
+  array : {
+    PickArrayValue: require('./nodes/array/pick-array-value').infoClass,
   }
 };
